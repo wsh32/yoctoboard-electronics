@@ -470,41 +470,41 @@ Wire Wire Line
 	8500 3250 8150 3250
 Text Notes 7000 4450 0    75   ~ 0
 Breadboard Connectors
-Text Label 7300 5600 2    50   ~ 0
+Text Label 7300 5800 2    50   ~ 0
 PA0
-Text Label 7300 5500 2    50   ~ 0
+Text Label 7300 5700 2    50   ~ 0
 PA1
-Text Label 7300 5400 2    50   ~ 0
+Text Label 7300 5600 2    50   ~ 0
 PA2
-Text Label 7300 5300 2    50   ~ 0
+Text Label 7300 5500 2    50   ~ 0
 PA3
-Text Label 7300 5200 2    50   ~ 0
+Text Label 7300 5400 2    50   ~ 0
 PA4
-Text Label 7300 5100 2    50   ~ 0
+Text Label 7300 5300 2    50   ~ 0
 PA5
-Text Label 7300 5000 2    50   ~ 0
+Text Label 7300 5200 2    50   ~ 0
 PA6
-Text Label 7300 4900 2    50   ~ 0
+Text Label 7300 5100 2    50   ~ 0
 PA7
-Text Label 8000 5800 0    50   ~ 0
+Text Label 8250 4900 2    50   ~ 0
 PA8
-Text Label 8000 5100 0    50   ~ 0
+Text Label 8250 5600 2    50   ~ 0
 PB8
-Text Label 8000 5200 0    50   ~ 0
+Text Label 8250 5500 2    50   ~ 0
 PB7
-Text Label 8000 5300 0    50   ~ 0
+Text Label 8250 5400 2    50   ~ 0
 PB6
-Text Label 8000 5400 0    50   ~ 0
+Text Label 8250 5300 2    50   ~ 0
 PB5
-Text Label 8000 5500 0    50   ~ 0
+Text Label 8250 5200 2    50   ~ 0
 PB4
-Text Label 8000 5600 0    50   ~ 0
+Text Label 8250 5100 2    50   ~ 0
 PB3
-Text Label 8000 5000 0    50   ~ 0
+Text Label 7300 4900 2    50   ~ 0
 PB1
-Text Label 7300 4800 2    50   ~ 0
+Text Label 7300 5000 2    50   ~ 0
 PB0
-Text Label 8000 5700 0    50   ~ 0
+Text Label 8250 5000 2    50   ~ 0
 PA15
 $Comp
 L Connector:AudioJack4 J2
@@ -840,81 +840,87 @@ Connection ~ 3500 1400
 Wire Wire Line
 	3500 1400 3500 1500
 $Comp
-L Connector:Conn_01x11_Male J4
-U 1 1 5E20C84F
-P 7800 5300
-F 0 "J4" H 7900 4700 50  0000 C CNN
-F 1 "CONN_RIGHT" H 7900 5950 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x11_P2.54mm_Vertical" H 7800 5300 50  0001 C CNN
-F 3 "~" H 7800 5300 50  0001 C CNN
-	1    7800 5300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x11_Male J3
-U 1 1 5E211A46
-P 7500 5300
-F 0 "J3" H 7600 5900 50  0000 C CNN
-F 1 "CONN_LEFT" H 7600 4650 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x11_P2.54mm_Vertical" H 7500 5300 50  0001 C CNN
-F 3 "~" H 7500 5300 50  0001 C CNN
-	1    7500 5300
-	-1   0    0    1   
-$EndComp
-$Comp
 L power:GND #PWR037
 U 1 1 5E2132BB
-P 7100 5900
-F 0 "#PWR037" H 7100 5650 50  0001 C CNN
-F 1 "GND" H 7105 5727 50  0000 C CNN
-F 2 "" H 7100 5900 50  0001 C CNN
-F 3 "" H 7100 5900 50  0001 C CNN
-	1    7100 5900
+P 7100 6100
+F 0 "#PWR037" H 7100 5850 50  0001 C CNN
+F 1 "GND" H 7105 5927 50  0000 C CNN
+F 2 "" H 7100 6100 50  0001 C CNN
+F 3 "" H 7100 6100 50  0001 C CNN
+	1    7100 6100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7100 5900 7100 5800
+	7100 6100 7100 6000
 Wire Wire Line
-	7100 5800 7300 5800
+	7100 6000 7300 6000
 $Comp
 L power:GND #PWR039
 U 1 1 5E2154DE
-P 8650 4900
-F 0 "#PWR039" H 8650 4650 50  0001 C CNN
-F 1 "GND" H 8655 4727 50  0000 C CNN
-F 2 "" H 8650 4900 50  0001 C CNN
-F 3 "" H 8650 4900 50  0001 C CNN
-	1    8650 4900
+P 8050 6100
+F 0 "#PWR039" H 8050 5850 50  0001 C CNN
+F 1 "GND" H 8055 5927 50  0000 C CNN
+F 2 "" H 8050 6100 50  0001 C CNN
+F 3 "" H 8050 6100 50  0001 C CNN
+	1    8050 6100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8650 4900 8650 4800
+	8050 6100 8050 6000
 Wire Wire Line
-	8650 4800 8000 4800
+	7100 5900 7300 5900
+Wire Wire Line
+	8250 5900 8050 5900
+Text Notes 9050 4800 0    50   ~ 0
+TODO: Add I2C and 5V rail to outputs
+Wire Wire Line
+	8050 6000 8250 6000
 $Comp
-L power:+3V3 #PWR036
-U 1 1 5E217601
-P 7100 5700
-F 0 "#PWR036" H 7100 5550 50  0001 C CNN
-F 1 "+3V3" V 7115 5828 50  0000 L CNN
-F 2 "" H 7100 5700 50  0001 C CNN
-F 3 "" H 7100 5700 50  0001 C CNN
-	1    7100 5700
+L Connector:Conn_01x12_Male J3
+U 1 1 5E16ADD7
+P 7500 5500
+F 0 "J3" H 7600 6100 50  0000 R CNN
+F 1 "CONN_LEFT" H 7750 4750 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x12_P2.54mm_Vertical" H 7500 5500 50  0001 C CNN
+F 3 "~" H 7500 5500 50  0001 C CNN
+	1    7500 5500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x12_Male J4
+U 1 1 5E16D43E
+P 8450 5500
+F 0 "J4" H 8550 6100 50  0000 R CNN
+F 1 "CONN_RIGHT" H 8700 4750 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x12_P2.54mm_Vertical" H 8450 5500 50  0001 C CNN
+F 3 "~" H 8450 5500 50  0001 C CNN
+	1    8450 5500
+	-1   0    0    1   
+$EndComp
+Text Label 8250 5800 2    50   ~ 0
+I2C_SDA
+Text Label 8250 5700 2    50   ~ 0
+I2C_SCL
+$Comp
+L power:VPP #PWR?
+U 1 1 5E18CC2A
+P 7100 5900
+F 0 "#PWR?" H 7100 5750 50  0001 C CNN
+F 1 "VPP" V 7115 6027 50  0000 L CNN
+F 2 "" H 7100 5900 50  0001 C CNN
+F 3 "" H 7100 5900 50  0001 C CNN
+	1    7100 5900
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	7100 5700 7300 5700
 $Comp
-L power:+3V3 #PWR038
-U 1 1 5E21A16D
-P 8250 4900
-F 0 "#PWR038" H 8250 4750 50  0001 C CNN
-F 1 "+3V3" V 8265 5028 50  0000 L CNN
-F 2 "" H 8250 4900 50  0001 C CNN
-F 3 "" H 8250 4900 50  0001 C CNN
-	1    8250 4900
-	0    1    1    0   
+L power:VPP #PWR?
+U 1 1 5E18CEEB
+P 8050 5900
+F 0 "#PWR?" H 8050 5750 50  0001 C CNN
+F 1 "VPP" V 8065 6027 50  0000 L CNN
+F 2 "" H 8050 5900 50  0001 C CNN
+F 3 "" H 8050 5900 50  0001 C CNN
+	1    8050 5900
+	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	8000 4900 8250 4900
 $EndSCHEMATC
