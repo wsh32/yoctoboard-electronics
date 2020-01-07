@@ -1,0 +1,334 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "EEPROM Breakout Board"
+Date "2020-01-06"
+Rev "A"
+Comp "The Ultraboard Project"
+Comment1 "https://www.gnu.org/licenses/gpl-3.0.en.html"
+Comment2 "License: GNU GPLv3"
+Comment3 "Designer: Wesley Soo-Hoo"
+Comment4 ""
+$EndDescr
+$Comp
+L Memory_EEPROM:M95256-WMN6P U2
+U 1 1 5E146857
+P 6300 4200
+F 0 "U2" H 6050 4450 50  0000 C CNN
+F 1 "M95256-WMN6P" H 6700 3950 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6300 4200 50  0001 C CNN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/9d/75/f0/3e/76/00/4c/0b/CD00103810.pdf/files/CD00103810.pdf/jcr:content/translations/en.CD00103810.pdf" H 6300 4200 50  0001 C CNN
+	1    6300 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L ultraboard_lib:C_100nF C5
+U 1 1 5E1475A6
+P 5650 3450
+F 0 "C5" H 5742 3496 50  0000 L CNN
+F 1 "C_100nF" H 5742 3405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0201_0603Metric" H 5825 3450 50  0001 C CNN
+F 3 "" H 5825 3450 50  0001 C CNN
+	1    5650 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L ultraboard_lib:C_10uF C4
+U 1 1 5E148655
+P 5200 3450
+F 0 "C4" H 5292 3496 50  0000 L CNN
+F 1 "C_10uF" H 5292 3405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5200 3450 50  0001 C CNN
+F 3 "" H 5200 3450 50  0001 C CNN
+	1    5200 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR07
+U 1 1 5E19826D
+P 5000 3150
+F 0 "#PWR07" H 5000 3000 50  0001 C CNN
+F 1 "+3V3" H 5015 3323 50  0000 C CNN
+F 2 "" H 5000 3150 50  0001 C CNN
+F 3 "" H 5000 3150 50  0001 C CNN
+	1    5000 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5E19884D
+P 5200 3700
+F 0 "#PWR08" H 5200 3450 50  0001 C CNN
+F 1 "GND" H 5205 3527 50  0000 C CNN
+F 2 "" H 5200 3700 50  0001 C CNN
+F 3 "" H 5200 3700 50  0001 C CNN
+	1    5200 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 3550 5200 3700
+$Comp
+L power:GND #PWR09
+U 1 1 5E19B5CE
+P 5650 3700
+F 0 "#PWR09" H 5650 3450 50  0001 C CNN
+F 1 "GND" H 5655 3527 50  0000 C CNN
+F 2 "" H 5650 3700 50  0001 C CNN
+F 3 "" H 5650 3700 50  0001 C CNN
+	1    5650 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 3700 5650 3550
+Wire Wire Line
+	5000 3150 5000 3250
+Wire Wire Line
+	5000 3250 5200 3250
+Wire Wire Line
+	5200 3250 5200 3350
+Wire Wire Line
+	5200 3250 5650 3250
+Wire Wire Line
+	5650 3250 5650 3350
+Connection ~ 5200 3250
+Wire Wire Line
+	5650 3250 6300 3250
+Wire Wire Line
+	6300 3250 6300 3900
+Connection ~ 5650 3250
+$Comp
+L power:GND #PWR010
+U 1 1 5E19D6D2
+P 6300 4600
+F 0 "#PWR010" H 6300 4350 50  0001 C CNN
+F 1 "GND" H 6305 4427 50  0000 C CNN
+F 2 "" H 6300 4600 50  0001 C CNN
+F 3 "" H 6300 4600 50  0001 C CNN
+	1    6300 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 4600 6300 4500
+Text Label 6700 4200 0    50   ~ 0
+MOSI
+Text Label 6700 4100 0    50   ~ 0
+SCK
+Text Label 6700 4300 0    50   ~ 0
+MISO
+Text Label 5900 4300 2    50   ~ 0
+nSS
+Text Label 5900 4200 2    50   ~ 0
+nHOLD
+Text Label 5900 4100 2    50   ~ 0
+nW
+Text Notes 1950 2750 0    75   ~ 0
+3V3 Supply
+Text Notes 8150 2750 0    75   ~ 0
+Pin Headers
+Text Notes 5000 2750 0    75   ~ 0
+EEPROM Device
+$Comp
+L Regulator_Linear:AP2127N-3.3 U1
+U 1 1 5E1ADAA4
+P 3000 3300
+F 0 "U1" H 3000 3542 50  0000 C CNN
+F 1 "AP2127N-3.3" H 3000 3451 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3000 3525 50  0001 C CIN
+F 3 "https://www.diodes.com/assets/Datasheets/AP2127.pdf" H 3000 3300 50  0001 C CNN
+	1    3000 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5E1AF69C
+P 3000 3700
+F 0 "#PWR04" H 3000 3450 50  0001 C CNN
+F 1 "GND" H 3005 3527 50  0000 C CNN
+F 2 "" H 3000 3700 50  0001 C CNN
+F 3 "" H 3000 3700 50  0001 C CNN
+	1    3000 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 3600 3000 3700
+$Comp
+L ultraboard_lib:C_100nF C2
+U 1 1 5E1B02FA
+P 2300 3500
+F 0 "C2" H 2392 3546 50  0000 L CNN
+F 1 "C_100nF" H 2392 3455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0201_0603Metric" H 2475 3500 50  0001 C CNN
+F 3 "" H 2475 3500 50  0001 C CNN
+	1    2300 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L ultraboard_lib:C_1uF C1
+U 1 1 5E1B0BBB
+P 1900 3500
+F 0 "C1" H 1992 3546 50  0000 L CNN
+F 1 "C_1uF" H 1992 3455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 2175 3550 50  0001 C CNN
+F 3 "" H 2050 3500 50  0001 C CNN
+	1    1900 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 5E1B358D
+P 1900 3050
+F 0 "#PWR01" H 1900 2900 50  0001 C CNN
+F 1 "+5V" H 1915 3223 50  0000 C CNN
+F 2 "" H 1900 3050 50  0001 C CNN
+F 3 "" H 1900 3050 50  0001 C CNN
+	1    1900 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 3050 1900 3300
+Wire Wire Line
+	1900 3300 2300 3300
+Connection ~ 1900 3300
+Wire Wire Line
+	1900 3300 1900 3400
+Wire Wire Line
+	2300 3400 2300 3300
+Connection ~ 2300 3300
+Wire Wire Line
+	2300 3300 2700 3300
+$Comp
+L power:GND #PWR03
+U 1 1 5E1B4003
+P 2300 3700
+F 0 "#PWR03" H 2300 3450 50  0001 C CNN
+F 1 "GND" H 2305 3527 50  0000 C CNN
+F 2 "" H 2300 3700 50  0001 C CNN
+F 3 "" H 2300 3700 50  0001 C CNN
+	1    2300 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 3700 2300 3600
+$Comp
+L power:GND #PWR02
+U 1 1 5E1B52ED
+P 1900 3700
+F 0 "#PWR02" H 1900 3450 50  0001 C CNN
+F 1 "GND" H 1905 3527 50  0000 C CNN
+F 2 "" H 1900 3700 50  0001 C CNN
+F 3 "" H 1900 3700 50  0001 C CNN
+	1    1900 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 3700 1900 3600
+$Comp
+L ultraboard_lib:C_4.7uF C3
+U 1 1 5E1B5972
+P 3450 3500
+F 0 "C3" H 3542 3546 50  0000 L CNN
+F 1 "C_4.7uF" H 3542 3455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 3725 3550 50  0001 C CNN
+F 3 "" H 3600 3500 50  0001 C CNN
+	1    3450 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 3400 3450 3300
+Wire Wire Line
+	3450 3300 3300 3300
+$Comp
+L power:GND #PWR05
+U 1 1 5E1B6691
+P 3450 3700
+F 0 "#PWR05" H 3450 3450 50  0001 C CNN
+F 1 "GND" H 3455 3527 50  0000 C CNN
+F 2 "" H 3450 3700 50  0001 C CNN
+F 3 "" H 3450 3700 50  0001 C CNN
+	1    3450 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 3700 3450 3600
+$Comp
+L power:+3V3 #PWR06
+U 1 1 5E1B7399
+P 3700 3300
+F 0 "#PWR06" H 3700 3150 50  0001 C CNN
+F 1 "+3V3" V 3715 3428 50  0000 L CNN
+F 2 "" H 3700 3300 50  0001 C CNN
+F 3 "" H 3700 3300 50  0001 C CNN
+	1    3700 3300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3700 3300 3450 3300
+Connection ~ 3450 3300
+$Comp
+L Connector:Conn_01x09_Male J1
+U 1 1 5E1B8A48
+P 8950 3500
+F 0 "J1" H 9050 2950 50  0000 C CNN
+F 1 "BREAKOUT" H 9050 4000 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical" H 8950 3500 50  0001 C CNN
+F 3 "~" H 8950 3500 50  0001 C CNN
+	1    8950 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 5E1BC0D3
+P 8500 4000
+F 0 "#PWR013" H 8500 3750 50  0001 C CNN
+F 1 "GND" H 8505 3827 50  0000 C CNN
+F 2 "" H 8500 4000 50  0001 C CNN
+F 3 "" H 8500 4000 50  0001 C CNN
+	1    8500 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 3900 8500 3900
+Wire Wire Line
+	8500 3900 8500 4000
+Wire Wire Line
+	8500 3700 8750 3700
+$Comp
+L power:+5V #PWR012
+U 1 1 5E1BE9E0
+P 8500 3800
+F 0 "#PWR012" H 8500 3650 50  0001 C CNN
+F 1 "+5V" V 8515 3928 50  0000 L CNN
+F 2 "" H 8500 3800 50  0001 C CNN
+F 3 "" H 8500 3800 50  0001 C CNN
+	1    8500 3800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8500 3800 8750 3800
+$Comp
+L power:+3V3 #PWR011
+U 1 1 5E1BF94D
+P 8500 3700
+F 0 "#PWR011" H 8500 3550 50  0001 C CNN
+F 1 "+3V3" V 8515 3828 50  0000 L CNN
+F 2 "" H 8500 3700 50  0001 C CNN
+F 3 "" H 8500 3700 50  0001 C CNN
+	1    8500 3700
+	0    -1   -1   0   
+$EndComp
+Text Label 8750 3500 2    50   ~ 0
+nW
+Text Label 8750 3100 2    50   ~ 0
+nHOLD
+Text Label 8750 3600 2    50   ~ 0
+nSS
+Text Label 8750 3200 2    50   ~ 0
+SCK
+Text Label 8750 3300 2    50   ~ 0
+MOSI
+Text Label 8750 3400 2    50   ~ 0
+MISO
+$EndSCHEMATC
