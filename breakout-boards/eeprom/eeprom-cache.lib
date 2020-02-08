@@ -133,9 +133,8 @@ ENDDEF
 DEF ultraboard_lib_C_100nF C 0 40 N Y 1 F N
 F0 "C" 75 50 50 H V C CNN
 F1 "ultraboard_lib_C_100nF" 200 -50 50 H V C CNN
-F2 "Capacitor_SMD:C_0201_0603Metric" 175 0 50 H I C CNN
-F3 "" 175 0 50 H I C CNN
-ALIAS C_100nF C_30pF C_100pF C_10pF
+F2 "Capacitor_SMD:C_0603_1608Metric" 275 50 50 H I C CNN
+F3 "" 150 0 50 H I C CNN
 DRAW
 P 2 1 1 13 -60 -20 60 -20 N
 P 2 1 1 12 -60 20 60 20 N
@@ -149,9 +148,8 @@ ENDDEF
 DEF ultraboard_lib_C_10uF C 0 40 N Y 1 F N
 F0 "C" 75 50 50 H V C CNN
 F1 "ultraboard_lib_C_10uF" 200 -50 50 H V C CNN
-F2 "Capacitor_SMD:C_0805_2012Metric" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-ALIAS C_10uF C_22uF C_47uF C_33uF
+F2 "Capacitor_SMD:C_0603_1608Metric" 275 50 50 H I C CNN
+F3 "" 150 0 50 H I C CNN
 DRAW
 P 2 1 1 13 -60 -20 60 -20 N
 P 2 1 1 12 -60 20 60 20 N
@@ -165,7 +163,7 @@ ENDDEF
 DEF ultraboard_lib_C_1uF C 0 40 N Y 1 F N
 F0 "C" 75 50 50 H V C CNN
 F1 "ultraboard_lib_C_1uF" 200 -50 50 H V C CNN
-F2 "Capacitor_SMD:C_0402_1005Metric" 275 50 50 H I C CNN
+F2 "Capacitor_SMD:C_0603_1608Metric" 275 50 50 H I C CNN
 F3 "" 150 0 50 H I C CNN
 DRAW
 P 2 1 1 13 -60 -20 60 -20 N
@@ -180,9 +178,9 @@ ENDDEF
 DEF ultraboard_lib_C_4.7uF C 0 40 N Y 1 F N
 F0 "C" 75 50 50 H V C CNN
 F1 "ultraboard_lib_C_4.7uF" 200 -50 50 H V C CNN
-F2 "Capacitor_SMD:C_0402_1005Metric" 275 50 50 H I C CNN
+F2 "Capacitor_SMD:C_0603_1608Metric" 275 50 50 H I C CNN
 F3 "" 150 0 50 H I C CNN
-ALIAS C_4.7uF C_2.2uF C_1uF C_1nF C_10nF
+ALIAS C_100nF C_330nF C_100pF C_1uF C_10nF C_10uF C_2.2uF C_22uF C_4.7uF C_30pF
 DRAW
 P 2 1 1 13 -60 -20 60 -20 N
 P 2 1 1 12 -60 20 60 20 N

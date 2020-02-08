@@ -227,6 +227,65 @@ X A 2 100 0 70 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# Device_D_Zener_Small
+#
+DEF Device_D_Zener_Small D 0 10 N N 1 F N
+F0 "D" 0 90 50 H V C CNN
+F1 "Device_D_Zener_Small" 0 -90 50 H V C CNN
+F2 "" 0 0 50 V I C CNN
+F3 "" 0 0 50 V I C CNN
+$FPLIST
+ TO-???*
+ *_Diode_*
+ *SingleDiode*
+ D_*
+$ENDFPLIST
+DRAW
+P 2 0 1 0 30 0 -30 0 N
+P 3 0 1 0 -10 40 -30 40 -30 -40 N
+P 4 0 1 0 30 40 -30 0 30 -40 30 40 N
+X K 1 -100 0 70 R 50 50 1 1 P
+X A 2 100 0 70 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_Fuse_Small
+#
+DEF Device_Fuse_Small F 0 10 N N 1 F N
+F0 "F" 0 -60 50 H V C CNN
+F1 "Device_Fuse_Small" 0 60 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ SM*
+$ENDFPLIST
+DRAW
+S -50 20 50 -20 0 1 0 N
+P 2 0 1 0 -50 0 50 0 N
+X ~ 1 -100 0 50 R 50 50 1 1 P
+X ~ 2 100 0 50 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_Q_NPN_BEC
+#
+DEF Device_Q_NPN_BEC Q 0 0 Y N 1 F N
+F0 "Q" 200 50 50 H V L CNN
+F1 "Device_Q_NPN_BEC" 200 -50 50 H V L CNN
+F2 "" 200 100 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+C 50 0 111 0 1 10 N
+P 2 0 1 0 25 25 100 100 N
+P 3 0 1 0 25 -25 100 -100 100 -100 N
+P 3 0 1 20 25 75 25 -75 25 -75 N
+P 5 0 1 0 50 -70 70 -50 90 -90 50 -70 50 -70 F
+X B 1 -200 0 225 R 50 50 1 1 I
+X E 2 100 -200 100 U 50 50 1 1 P
+X C 3 100 200 100 D 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # MCU_ST_STM32F0_STM32F042K6Tx
 #
 DEF MCU_ST_STM32F0_STM32F042K6Tx U 0 20 Y Y 1 F N
@@ -360,9 +419,8 @@ ENDDEF
 DEF ultraboard_lib_C_100nF C 0 40 N Y 1 F N
 F0 "C" 75 50 50 H V C CNN
 F1 "ultraboard_lib_C_100nF" 200 -50 50 H V C CNN
-F2 "Capacitor_SMD:C_0201_0603Metric" 175 0 50 H I C CNN
-F3 "" 175 0 50 H I C CNN
-ALIAS C_100nF C_30pF C_100pF C_10pF
+F2 "Capacitor_SMD:C_0603_1608Metric" 275 50 50 H I C CNN
+F3 "" 150 0 50 H I C CNN
 DRAW
 P 2 1 1 13 -60 -20 60 -20 N
 P 2 1 1 12 -60 20 60 20 N
@@ -376,9 +434,9 @@ ENDDEF
 DEF ultraboard_lib_C_10uF C 0 40 N Y 1 F N
 F0 "C" 75 50 50 H V C CNN
 F1 "ultraboard_lib_C_10uF" 200 -50 50 H V C CNN
-F2 "Capacitor_SMD:C_0805_2012Metric" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-ALIAS C_10uF C_22uF C_47uF C_33uF
+F2 "Capacitor_SMD:C_0603_1608Metric" 275 50 50 H I C CNN
+F3 "" 150 0 50 H I C CNN
+ALIAS C_100nF C_330nF C_100pF C_1uF C_10nF C_10uF C_2.2uF C_22uF C_4.7uF C_30pF
 DRAW
 P 2 1 1 13 -60 -20 60 -20 N
 P 2 1 1 12 -60 20 60 20 N
@@ -392,9 +450,8 @@ ENDDEF
 DEF ultraboard_lib_C_1uF C 0 40 N Y 1 F N
 F0 "C" 75 50 50 H V C CNN
 F1 "ultraboard_lib_C_1uF" 200 -50 50 H V C CNN
-F2 "Capacitor_SMD:C_0402_1005Metric" 275 50 50 H I C CNN
+F2 "Capacitor_SMD:C_0603_1608Metric" 275 50 50 H I C CNN
 F3 "" 150 0 50 H I C CNN
-ALIAS C_4.7uF C_2.2uF C_1uF C_1nF C_10nF
 DRAW
 P 2 1 1 13 -60 -20 60 -20 N
 P 2 1 1 12 -60 20 60 20 N
@@ -408,8 +465,8 @@ ENDDEF
 DEF ultraboard_lib_C_30pF C 0 40 N Y 1 F N
 F0 "C" 75 50 50 H V C CNN
 F1 "ultraboard_lib_C_30pF" 200 -50 50 H V C CNN
-F2 "Capacitor_SMD:C_0201_0603Metric" 175 0 50 H I C CNN
-F3 "" 175 0 50 H I C CNN
+F2 "Capacitor_SMD:C_0603_1608Metric" 275 50 50 H I C CNN
+F3 "" 150 0 50 H I C CNN
 DRAW
 P 2 1 1 13 -60 -20 60 -20 N
 P 2 1 1 12 -60 20 60 20 N
@@ -423,7 +480,7 @@ ENDDEF
 DEF ultraboard_lib_C_4.7uF C 0 40 N Y 1 F N
 F0 "C" 75 50 50 H V C CNN
 F1 "ultraboard_lib_C_4.7uF" 200 -50 50 H V C CNN
-F2 "Capacitor_SMD:C_0402_1005Metric" 275 50 50 H I C CNN
+F2 "Capacitor_SMD:C_0603_1608Metric" 275 50 50 H I C CNN
 F3 "" 150 0 50 H I C CNN
 DRAW
 P 2 1 1 13 -60 -20 60 -20 N
@@ -452,14 +509,44 @@ X A 2 100 0 70 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# ultraboard_lib_R_10K
+#
+DEF ultraboard_lib_R_10K R 0 40 N Y 1 F N
+F0 "R" 75 25 50 H V C CNN
+F1 "ultraboard_lib_R_10K" 200 -50 50 H V C CNN
+F2 "Resistor_SMD:R_0603_1608Metric" 50 0 50 H I C CNN
+F3 "" 50 0 50 H I C CNN
+DRAW
+P 5 1 1 0 0 0 40 -15 0 -30 -40 -45 0 -60 N
+P 5 1 1 0 0 60 40 45 0 30 -40 15 0 0 N
+X ~ 1 0 100 40 D 50 50 1 1 P
+X ~ 2 0 -100 40 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# ultraboard_lib_R_1K
+#
+DEF ultraboard_lib_R_1K R 0 40 N Y 1 F N
+F0 "R" 75 25 50 H V C CNN
+F1 "ultraboard_lib_R_1K" 200 -50 50 H V C CNN
+F2 "Resistor_SMD:R_0603_1608Metric" 50 0 50 H I C CNN
+F3 "" 50 0 50 H I C CNN
+ALIAS R_100 R_10K R_120K R_1K R_1M R_200 R_499 R_4.99K R_499K
+DRAW
+P 5 1 1 0 0 0 40 -15 0 -30 -40 -45 0 -60 N
+P 5 1 1 0 0 60 40 45 0 30 -40 15 0 0 N
+X ~ 1 0 100 40 D 50 50 1 1 P
+X ~ 2 0 -100 40 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # ultraboard_lib_R_200
 #
 DEF ultraboard_lib_R_200 R 0 40 N Y 1 F N
 F0 "R" 75 25 50 H V C CNN
 F1 "ultraboard_lib_R_200" 200 -50 50 H V C CNN
-F2 "Resistor_SMD:R_0402_1005Metric" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-ALIAS R_1K R_2.2K R_25K R_3K R_3.3K R_4.7K R_499 R_2K R_200
+F2 "Resistor_SMD:R_0603_1608Metric" 50 0 50 H I C CNN
+F3 "" 50 0 50 H I C CNN
 DRAW
 P 5 1 1 0 0 0 40 -15 0 -30 -40 -45 0 -60 N
 P 5 1 1 0 0 60 40 45 0 30 -40 15 0 0 N
@@ -473,8 +560,9 @@ ENDDEF
 DEF ultraboard_lib_R_4.7K R 0 40 N Y 1 F N
 F0 "R" 75 25 50 H V C CNN
 F1 "ultraboard_lib_R_4.7K" 200 -50 50 H V C CNN
-F2 "Resistor_SMD:R_0402_1005Metric" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
+F2 "Resistor_SMD:R_0603_1608Metric" 50 0 50 H I C CNN
+F3 "" 50 0 50 H I C CNN
+ALIAS R_100K R_120 R_2.2K R_4.7K R_60.4
 DRAW
 P 5 1 1 0 0 0 40 -15 0 -30 -40 -45 0 -60 N
 P 5 1 1 0 0 60 40 45 0 30 -40 15 0 0 N
