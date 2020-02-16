@@ -1,0 +1,119 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# Connector_Conn_01x02_Male
+#
+DEF Connector_Conn_01x02_Male J 0 40 Y N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "Connector_Conn_01x02_Male" 0 -200 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+S 34 -95 0 -105 1 1 6 F
+S 34 5 0 -5 1 1 6 F
+P 2 1 1 6 50 -100 34 -100 N
+P 2 1 1 6 50 0 34 0 N
+X Pin_1 1 200 0 150 L 50 50 1 1 P
+X Pin_2 2 200 -100 150 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_D_Small
+#
+DEF Device_D_Small D 0 10 N N 1 F N
+F0 "D" -50 80 50 H V L CNN
+F1 "Device_D_Small" -150 -80 50 H V L CNN
+F2 "" 0 0 50 V I C CNN
+F3 "" 0 0 50 V I C CNN
+$FPLIST
+ TO-???*
+ *_Diode_*
+ *SingleDiode*
+ D_*
+$ENDFPLIST
+DRAW
+P 2 0 1 0 -30 -40 -30 40 N
+P 2 0 1 0 -30 0 30 0 N
+P 4 0 1 0 30 -40 -30 0 30 40 30 -40 N
+X K 1 -100 0 70 R 50 50 1 1 P
+X A 2 100 0 70 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# power_+5V
+#
+DEF power_+5V #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "power_+5V" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +5V 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# power_GND
+#
+DEF power_GND #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "power_GND" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# ultraboard_lib_C_100nF
+#
+DEF ultraboard_lib_C_100nF C 0 40 N Y 1 F N
+F0 "C" 75 50 50 H V C CNN
+F1 "ultraboard_lib_C_100nF" 200 -50 50 H V C CNN
+F2 "Capacitor_SMD:C_0603_1608Metric" 275 50 50 H I C CNN
+F3 "" 150 0 50 H I C CNN
+ALIAS C_100nF C_330nF C_100pF C_1uF C_10nF C_10uF C_2.2uF C_22uF C_4.7uF C_30pF
+DRAW
+P 2 1 1 13 -60 -20 60 -20 N
+P 2 1 1 12 -60 20 60 20 N
+X ~ 1 0 100 80 D 50 50 1 1 P
+X ~ 2 0 -100 80 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# ultraboard_lib_keyswitch_mx
+#
+DEF ultraboard_lib_keyswitch_mx K 0 40 Y Y 2 L N
+F0 "K" -175 250 50 H V C CNN
+F1 "ultraboard_lib_keyswitch_mx" 300 -250 50 H V C CNN
+F2 "ultraboard:keyswitch_mx" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+C -80 0 20 1 1 0 N
+C 80 0 20 1 1 0 N
+T 0 90 -165 30 0 2 1 RGB Normal 0 C C
+S 200 200 -200 -200 2 1 10 f
+P 2 1 1 0 -60 10 60 70 N
+P 2 2 1 0 50 -140 70 -140 N
+P 2 2 1 0 50 -100 70 -100 N
+P 2 2 1 0 185 -140 105 -140 N
+P 3 2 1 0 90 -100 50 -140 50 -120 N
+P 3 2 1 0 90 -60 50 -100 50 -80 N
+P 3 2 1 0 145 -40 145 -140 145 -160 N
+P 4 2 1 0 185 -60 105 -60 145 -140 185 -60 N
+X A 1 -200 0 100 R 50 50 1 1 P
+X B 2 200 0 100 L 50 50 1 1 P
+X VDD 3 0 300 100 D 50 50 2 1 W
+X DOUT 4 300 0 100 L 50 50 2 1 O
+X VSS 5 0 -300 100 U 50 50 2 1 W
+X DIN 6 -300 0 100 R 50 50 2 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library

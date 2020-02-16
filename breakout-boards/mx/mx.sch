@@ -5,8 +5,8 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "MX Switch Breakout"
-Date "2019-12-27"
-Rev "A"
+Date "2020-02-15"
+Rev "B"
 Comp "The UltraBoard Project"
 Comment1 "https://www.gnu.org/licenses/gpl-3.0.en.html"
 Comment2 "License: GNU GPLv3"
@@ -120,17 +120,6 @@ F 3 "" H 5950 2550 50  0001 C CNN
 	1    5950 2550
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:C_Small C1
-U 1 1 5E078A1C
-P 6200 2650
-F 0 "C1" V 6100 2650 50  0000 C CNN
-F 1 "0.1uF" V 6300 2650 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0201_0603Metric" H 6200 2650 50  0001 C CNN
-F 3 "~" H 6200 2650 50  0001 C CNN
-	1    6200 2650
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	6100 2650 5950 2650
 Connection ~ 5950 2650
@@ -139,25 +128,25 @@ Wire Wire Line
 $Comp
 L power:GND #PWR05
 U 1 1 5E0795F7
-P 6400 2700
-F 0 "#PWR05" H 6400 2450 50  0001 C CNN
-F 1 "GND" H 6405 2527 50  0000 C CNN
-F 2 "" H 6400 2700 50  0001 C CNN
-F 3 "" H 6400 2700 50  0001 C CNN
-	1    6400 2700
+P 6450 2700
+F 0 "#PWR05" H 6450 2450 50  0001 C CNN
+F 1 "GND" H 6455 2527 50  0000 C CNN
+F 2 "" H 6450 2700 50  0001 C CNN
+F 3 "" H 6450 2700 50  0001 C CNN
+	1    6450 2700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6400 2700 6400 2650
+	6450 2700 6450 2650
 Wire Wire Line
-	6400 2650 6300 2650
+	6450 2650 6300 2650
 $Comp
 L Device:D_Small D1
 U 1 1 5E07A6BF
 P 6400 4200
 F 0 "D1" H 6400 4100 50  0000 C CNN
 F 1 "D_Small" H 6400 4300 50  0000 C CNN
-F 2 "Diode_SMD:D_0402_1005Metric" V 6400 4200 50  0001 C CNN
+F 2 "Diode_SMD:D_SMA" V 6400 4200 50  0001 C CNN
 F 3 "~" V 6400 4200 50  0001 C CNN
 	1    6400 4200
 	-1   0    0    1   
@@ -185,5 +174,16 @@ F 3 "" H 5950 3050 50  0001 C CNN
 F 4 "A" H 5950 3050 50  0001 C CNN "key"
 	2    5950 3050
 	1    0    0    -1  
+$EndComp
+$Comp
+L ultraboard_lib:C_100nF C1
+U 1 1 5E488AE7
+P 6200 2650
+F 0 "C1" V 6100 2650 50  0000 C CNN
+F 1 "C_100nF" V 6300 2650 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6475 2700 50  0001 C CNN
+F 3 "" H 6350 2650 50  0001 C CNN
+	1    6200 2650
+	0    1    1    0   
 $EndComp
 $EndSCHEMATC
