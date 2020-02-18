@@ -1,0 +1,8 @@
+Reference, Quantity, Value, Footprint, Datasheet
+C1 ,1,"C_1uF","Capacitor_SMD:C_0603_1608Metric",""
+C3 ,1,"C_4.7uF","Capacitor_SMD:C_0603_1608Metric",""
+C4 ,1,"C_10uF","Capacitor_SMD:C_0603_1608Metric",""
+C5 C2 ,2,"C_100nF","Capacitor_SMD:C_0603_1608Metric",""
+J1 ,1,"BREAKOUT","Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical","~"
+U1 ,1,"AP2127N-3.3","Package_TO_SOT_SMD:SOT-23","https://www.diodes.com/assets/Datasheets/AP2127.pdf"
+U2 ,1,"M95256-WMN6P","Package_SO:SOIC-8_3.9x4.9mm_P1.27mm","http://www.st.com/content/ccc/resource/technical/document/datasheet/9d/75/f0/3e/76/00/4c/0b/CD00103810.pdf/files/CD00103810.pdf/jcr:content/translations/en.CD00103810.pdf"

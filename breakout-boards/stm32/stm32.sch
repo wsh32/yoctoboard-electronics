@@ -233,7 +233,7 @@ U 1 1 5E0CC361
 P 1500 6350
 F 0 "J1" H 1200 6900 50  0000 R CNN
 F 1 "Conn_ARM_JTAG_SWD_10" H 2550 5800 50  0000 R CNN
-F 2 "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD" H 1500 6350 50  0001 C CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical" H 1500 6350 50  0001 C CNN
 F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresight_components_trm.pdf" V 1150 5100 50  0001 C CNN
 	1    1500 6350
 	1    0    0    -1  
